@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .link-active {
+        @apply flex justify-center items-center xl:justify-start text-blue-400;
+    }
+    .link {
+        @apply flex justify-center xl:justify-start items-center text-gray-800 dark:text-white hover:text-blue-400 transition-colors duration-300
+        ease-in-out dark:hover:text-blue-400;
+    }
+    .icon {
+        @apply hidden xl:block font-bold xl:ml-4;
+    }
+    .tweet-icon {
+        @apply flex justify-center items-center mx-auto bg-blue-400 w-11 xl:w-full h-11 rounded-full text-white font-bold;
+    }
+    .tweet-action-icon {
+        @apply flex items-center dark:text-white text-xs text-gray-400 cursor-pointer transition-colors duration-300;
+    }
+    .dark-button {
+        @apply mx-auto size-11 xl:w-48 flex items-center justify-center bg-blue-400 py-3 rounded-full text-white font-bold;
+    }
+    .header-middle {
+      @apply flex justify-between items-center border px-4 py-3 sticky top-0 bg-white dark:bg-dim-900  border-gray-200 dark:border-gray-700;
+    }
+    .show-tweets {
+      @apply text-center py-4 bg-white dark:bg-dim-900 border border-gray-200 dark:border-dim-200 cursor-pointer  text-blue-400 text-sm;
+    }
+    .mode-button {
+      @apply py-2 border border-gray-200 dark:border-dim-200 bg-gray-50 dark:bg-dim-300;
+    }
+}
+@layer utilities {
+    /* width */
+    ::-webkit-scrollbar,
+    .dark ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+  
+    /* Track */
+    ::-webkit-scrollbar-track {
+      /* border-radius: 100vh; */
+      background: #fff;
+    }
+  
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #ccc;
+      border: 2px solid #fff;
+    }
+  
+    /* Track */
+    .dark ::-webkit-scrollbar-track {
+      background: #374151;
+    }
+  
+    /* Handle */
+    .dark ::-webkit-scrollbar-thumb {
+      background: #6b7280;
+      border: 2px solid #374151;
+    }
+  }
+  
